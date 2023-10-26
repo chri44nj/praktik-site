@@ -1,0 +1,38 @@
+/*** GENERAL ***/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #333;
+  --secondary: #fafffd;
+  --accent: #bd2424;
+  --accent2: #f3b61f;
+  --accent3: #3c91e6;
+}
+
+html,
+body {
+  background-color: var(--secondary);
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 6rem;
+  letter-spacing: -0.06rem;
+}
+
+p {
+  font-size: clamp(1rem, 3dvw, 1.5rem);
+  line-height: 2.2rem;
+  max-width: 50ch;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}

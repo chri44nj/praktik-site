@@ -1,0 +1,73 @@
+---
+const { placement, adjective, description } = Astro.props;
+---
+
+
+  <div class="hero">
+                    <p class="attribute" placement={placement} >{adjective}</p>
+                    <p class="textbox">{description}<p/>
+                </div>
+
+
+<style>
+
+.hero .attribute:hover {
+  cursor: pointer;
+  color: var(--accent)
+}
+
+.attribute {
+  font-size: clamp(1.2rem, 3dvw, 2rem);
+  font-weight: bold;
+  color: var(--secondary);
+  transition: color 0.3s;
+}
+
+.textbox {
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--secondary);
+  padding: 1rem;
+  border: solid var(--primary) 1px;
+  width: 275px;
+    display: none;
+    border-radius: 10px;
+}
+
+.textbox-clicked {
+display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.attributes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+.hero {
+  position: relative;
+}
+
+[placement="top"]:hover + .textbox {
+	 display: block;
+  position: absolute;
+  top: 50px;
+}
+
+[placement="bottom"]:hover + .textbox {
+	 display: block;
+  position: absolute;
+  bottom: 50px;
+}
+}
+
+
+</style>
