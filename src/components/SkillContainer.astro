@@ -1,0 +1,38 @@
+---
+const { heading } = Astro.props;
+---
+
+
+<section>
+<h2>{heading}</h2>
+<div class="skill-container">
+ <slot/>
+</div>
+</section>
+
+
+<style>
+h2 {
+    text-align:center;
+color: var(--secondary);
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+@media only screen and (min-width: 850px) {
+
+.skill-container {
+    gap: 1rem;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 4dvw, 2rem);
+}
+}
+</style>

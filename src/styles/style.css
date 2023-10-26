@@ -21,14 +21,15 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
-  line-height: 6rem;
-  letter-spacing: -0.06rem;
+  font-size: clamp(2rem, 6dvw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4dvw, 2rem);
 }
 
 p {
   font-size: clamp(1rem, 3dvw, 1.5rem);
-  line-height: 2.2rem;
   max-width: 50ch;
 }
 
@@ -36,3 +37,30 @@ a {
   text-decoration: none;
   font-size: 1.5rem;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.name {
+  color: var(--accent);
+  font-size: clamp(3rem, 6dvw, 5rem);
+}
+
+.arrow-down {
+  font-size: clamp(3rem, 6dvw, 5rem);
+  color: var(--primary);
+  margin-top: 4rem;
+  opacity: 90%;
+}
+
+.arrow-down:hover {
+  opacity: 100%;
+}
+
+.fa-star {
+  color: var(--accent2);
+  font-size: clamp(0.8rem, 2dvw, 1.2rem);
+}
+
+/* BURGIRRR */

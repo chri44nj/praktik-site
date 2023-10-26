@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Attribute from "../components/Attribute.astro"
+import SkillContainer from "../components/SkillContainer.astro"
 ---
 
 <Layout title="Hello there!">
@@ -32,6 +33,60 @@ import Attribute from "../components/Attribute.astro"
 	</section>
 	</article>
 
+	 <article class="welcome">
+            <h1>Hej, mit navn er <br> <span class="name">Christian Valentin.</span></h1>
+            <p>Jeg studerer <span class="bold">Multimediedesign</span> på KEA og har særligt fokus på at lave <span class="bold">brugervenlige websites</span> og <span class="bold">awesome video
+                    content</span>. </p> 
+					<p> En af mine bedste egenskaber er, at jeg elsker at lære og er ekstremt <span class="bold">lærenem</span>. Scroll ned for et overblik over en række af de <span class="bold">kompetencer</span>, jeg har erhvervet mig på studiet so far.  </p>
+            <a href="/"><i class="fa-sharp fa-solid fa-arrow-down arrow-down"></i></a>
+        </article>
+
+	<article class="skills">
+<SkillContainer heading="God til">
+	<p class="skill">HTML</p>
+	<i class="fa-solid fa-star"></i>
+<p class="skill">CSS</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">JS</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">Astro</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">GIT</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">NPM</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">Premiere Pro</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">Photoshop</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">Figma</p>
+</SkillContainer>
+<SkillContainer heading="Ved at lære">
+	<p class="skill">React</p>
+	<i class="fa-solid fa-star"></i>
+<p class="skill">Tailwind</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">Vite</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">Lottie</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">XD</p>
+</SkillContainer>
+<SkillContainer heading="Flydende i">
+	<p class="skill">Dansk</p>
+	<i class="fa-solid fa-star"></i>
+	<p class="skill">Engelsk</p>
+	<i class="fa-solid fa-star"></i>
+	<p class="skill">Danglish</p>
+</SkillContainer>
+<SkillContainer heading="Andre kvaliteter">
+	<p class="skill">High-Fives</p>
+	<i class="fa-solid fa-star"></i>
+<p class="skill">Madlavning</p>
+<i class="fa-solid fa-star"></i>
+<p class="skill">Brætspilssamling</p>
+</SkillContainer>
+	</article>
 </Layout>
 
 <style>
@@ -42,8 +97,8 @@ import Attribute from "../components/Attribute.astro"
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+    padding-block: 2rem;
   padding-inline: calc(1rem + 5dvw);
-  padding-block: 2rem;
    background-image: url(pics/PB_BW1.webp);
    background-size: cover;
   background-repeat: no-repeat;
@@ -58,6 +113,33 @@ import Attribute from "../components/Attribute.astro"
   justify-content:center;
 }
 
+.welcome {
+ height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   padding-block: 2rem;
+  padding-inline: calc(1rem + 5dvw);
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--primary);
+  gap: 0.5rem;	
+}
+
+.skills {
+	 height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding-block: 2rem;
+	 padding-inline: calc(0.5rem + 5dvw);
+	background-color: var(--primary);
+	color: var(--secondary);
+	
+}
 
 @media only screen and (min-width: 850px) {
 
@@ -67,6 +149,13 @@ import Attribute from "../components/Attribute.astro"
   align-items: center;
 }
 
+.skills {
+	gap: 3rem;
+}
+
+.skill {
+font-size: clamp(1.5rem, 4dvw, 2rem);
+}
 }
 
 
