@@ -43,6 +43,11 @@ function attributeClicked(event) {
 
   const textbox = event.target.nextElementSibling;
   textbox.classList.toggle("textbox-clicked");
+  if (event.target.style.textDecoration === "underline") {
+    event.target.style.textDecoration = "none";
+  } else {
+    event.target.style.textDecoration = "underline";
+  }
 
   if (clickedCount === 10) {
     hero.style.backgroundImage = "url(pics/PB_C1.webp)";
