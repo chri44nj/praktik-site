@@ -30,8 +30,7 @@ const isMobile = "ontouchstart" in document.documentElement;
 
 attribute.forEach((attr) => {
   if (isMobile) {
-    attr.addEventListener("touchstart", attributeClicked);
-    attr.addEventListener("touchend", attributeUnClicked);
+    attr.addEventListener("click", attributeClicked);
   }
 });
 
@@ -51,9 +50,4 @@ function attributeClicked(event) {
       attr.style.color = "var(--secondary)";
     });
   }
-}
-
-function attributeUnClicked(event) {
-  const textbox = event.target.nextElementSibling;
-  textbox.classList.toggle("textbox-clicked");
 }
