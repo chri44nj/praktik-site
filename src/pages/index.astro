@@ -98,7 +98,7 @@ import SkillContainer from "../components/SkillContainer.astro"
   flex-direction: column;
   justify-content: space-between;
     padding-block: 2rem;
-  padding-inline: calc(1rem + 5dvw);
+  padding-inline: 1rem;
    background-image: url(pics/PB_BW1.webp);
    background-size: cover;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ import SkillContainer from "../components/SkillContainer.astro"
   justify-content: center;
   align-items: center;
    padding-block: 2rem;
-  padding-inline: calc(1rem + 5dvw);
+  padding-inline: 1rem;
   text-align: center;
   background-color: var(--secondary);
   color: var(--primary);
@@ -135,7 +135,7 @@ import SkillContainer from "../components/SkillContainer.astro"
 	align-items: center;
 	gap: 2rem;
 	padding-block: 2rem;
-	 padding-inline: calc(0.5rem + 5dvw);
+	 padding-inline: 1rem;
 	background-color: var(--primary);
 	color: var(--secondary);
 	
@@ -147,6 +147,10 @@ import SkillContainer from "../components/SkillContainer.astro"
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.hero, .welcome, .skills {
+	 padding-inline: calc(1rem + 5dvw);
 }
 
 .skills {

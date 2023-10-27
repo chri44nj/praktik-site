@@ -29,7 +29,7 @@ h2 {
 }
 
 p {
-  font-size: clamp(1rem, 3dvw, 1.5rem);
+  font-size: clamp(1.2rem, 3dvw, 1.5rem);
   max-width: 50ch;
 }
 
@@ -50,7 +50,7 @@ a {
 .arrow-down {
   font-size: clamp(3rem, 6dvw, 5rem);
   color: var(--primary);
-  margin-top: 4rem;
+  margin-top: 1rem;
   opacity: 90%;
 }
 
