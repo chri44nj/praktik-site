@@ -10,9 +10,9 @@
         <a class="emailAddress" href="mailto:chris_valentin@hotmail.com">chris_valentin@hotmail.com</a>
         <div class="soMeLinks">
             <a href="https://www.facebook.com/christian.l.valentin1/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/valentinsdaghverdag/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/christian-valentin-262206226/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/chri44nj" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.instagram.com/valentinsdaghverdag/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
 
 
@@ -29,6 +29,7 @@
         align-items: center;
         padding-block: 2rem;
 	 padding-inline: 1rem;
+     gap: 0.5rem;
     }
 
     a, i  {
@@ -37,6 +38,10 @@
         &:hover {
             color: var(--accent2);
         }
+    }
+
+    i {
+         font-size: clamp(1.5rem, 4dvw, 2rem);
     }
 
    .breakline {
@@ -56,6 +61,7 @@
     @media only screen and (min-width: 850px) {
         footer {
              padding-inline: calc(1rem + 5dvw);
+             gap: 1rem;
         }
 
          .breakline {
