@@ -11,7 +11,7 @@ function attributeHovered(event) {
   if (!event.target.classList.contains("hovered")) {
     hoveredCount++;
     console.log(hoveredCount);
-    event.target.style.color = "var(--accent)";
+    event.target.style.color = "var(--accent2)";
     console.log("color changed!");
     event.target.classList.add("hovered");
   }
@@ -37,7 +37,7 @@ attribute.forEach((attr) => {
 function attributeClicked(event) {
   if (!event.target.classList.contains("clicked")) {
     clickedCount++;
-    event.target.style.color = "var(--accent)";
+    event.target.style.color = "var(--accent2)";
     event.target.classList.add("clicked");
   }
 

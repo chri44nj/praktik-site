@@ -4,10 +4,66 @@
 
 
 <footer>
+    <div class="breakline"></div>
+    <h2 class="pm">Fang og følg mig på</h2>
+         <p class="phoneNumber">+45 60 52 62 20</p>
+        <a class="emailAddress" href="mailto:chris_valentin@hotmail.com">chris_valentin@hotmail.com</a>
+        <div class="soMeLinks">
+            <a href="https://www.facebook.com/christian.l.valentin1/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/valentinsdaghverdag/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/christian-valentin-262206226/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/chri44nj" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+
 
 </footer>
 
 
 <style>
+    footer {
+        background-color: var(--primary);
+        color: var(--secondary);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 2rem;
+	 padding-inline: 1rem;
+    }
+
+    a, i  {
+        color: var(--secondary);
+        font-size: clamp(1.2rem, 3dvw, 1.5rem);
+        &:hover {
+            color: var(--accent2);
+        }
+    }
+
+   .breakline {
+  height: 5px;
+  width: 100%;
+  background-color: var(--secondary);
+  margin-bottom: 2rem;
+}
+
+  
+    .soMeLinks {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    @media only screen and (min-width: 850px) {
+        footer {
+             padding-inline: calc(1rem + 5dvw);
+        }
+
+         .breakline {
+        margin-bottom: 4rem;
+    }
+    }
+
+   
+    
 
 </style>

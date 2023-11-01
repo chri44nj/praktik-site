@@ -1,10 +1,13 @@
 ---
-const { heading } = Astro.props;
+const { jeg , heading } = Astro.props;
 ---
 
 
 <section>
+    <div class="skill-heading">
+    <p class="jeg">{jeg}</p>
 <h2>{heading}</h2>
+</div>
 <div class="skill-container">
  <slot/>
 </div>
@@ -13,8 +16,20 @@ const { heading } = Astro.props;
 
 <style>
 h2 {
-    text-align:center;
 color: var(--secondary);
+}
+
+.jeg {
+     font-size: clamp(1rem, 2dvw, 1.2rem);
+    font-family: 'Permanent Marker', cursive;
+}
+
+.skill-heading {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom: 0.5rem;
 }
 
 .skill-container {
@@ -25,10 +40,13 @@ color: var(--secondary);
     gap: 0.5rem;
 }
 
+
+
 @media only screen and (min-width: 850px) {
 
 .skill-container {
     gap: 1rem;
+      max-width: 60dvw;
 }
 
 h2 {
