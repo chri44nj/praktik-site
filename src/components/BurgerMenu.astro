@@ -25,14 +25,14 @@
     .menu-container {
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: end;
     position: fixed;
     top: 0;
-    left: -50%;
+    right: -50%;
     background-color: var(--accent);
     height: 100vh; 
     padding-right: 1rem;
-    transition: left 0.5s;
+    transition: right 0.5s;
     z-index: 1000;
       width: 50dvw;
 }
@@ -41,7 +41,7 @@
 .burger-menu {
     position: fixed;
     top: 50%;
-    left: 0;
+    right: 0;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1000;
@@ -53,7 +53,7 @@
     justify-content: space-between;
     width: 30px;
     height: 20px;
-  margin-left: 1rem;
+  margin-right: 1rem;
       &:hover .bar {
         background-color: var(--accent2);
 }
@@ -70,8 +70,8 @@
 ul {
     list-style: none;
     padding: 0;
-    margin-top: 2rem;
-    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
 }
 
 li {
@@ -92,14 +92,14 @@ a {
 
 @media only screen and (min-width: 850px) {
       .menu-container {
-         transition: left 0.5s;
+         transition: right 0.5s;
           padding-right: 2rem;
-          padding-left: 1rem;
+          padding-right: 1rem;
           width: auto;
 }
 
 .burger-icon {
-    margin-left: 2rem;
+    margin-right: 2rem;
 }
 }
 

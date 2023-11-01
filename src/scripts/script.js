@@ -88,14 +88,14 @@ burgerIcon.addEventListener("click", checkBurger);
 function checkBurger() {
   const menuContainer = document.querySelector(".menu-container");
 
-  if (menuContainer.style.left === "0px") {
-    menuContainer.style.left = "-50%";
+  if (menuContainer.style.right === "0px") {
+    menuContainer.style.right = "-50%";
     burgerIcon.classList.remove("extra-margin");
     burgerBar.forEach((bar) => {
       bar.classList.remove("open");
     });
   } else {
-    menuContainer.style.left = "0px";
+    menuContainer.style.right = "0px";
     burgerIcon.classList.add("extra-margin");
     burgerBar.forEach((bar) => {
       bar.classList.add("open");
