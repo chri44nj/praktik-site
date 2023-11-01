@@ -57,16 +57,24 @@ display: block;
   position: relative;
 }
 
+.textbox {
+  width: 33dvw;
+}
+
 [placement="top"]:hover + .textbox {
 	 display: block;
-  position: absolute;
-  top: 50px;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
 
 [placement="bottom"]:hover + .textbox {
 	 display: block;
-  position: absolute;
-  bottom: 50px;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
 }
 

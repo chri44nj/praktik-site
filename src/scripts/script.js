@@ -10,6 +10,7 @@ attribute.forEach((attribute) => {
 });
 
 function attributeHovered(event) {
+  const clickedAttribute = event.target;
   if (!clickedAttribute.classList.contains("hovered")) {
     hoveredCount++;
     console.log(hoveredCount);
