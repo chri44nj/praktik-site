@@ -89,7 +89,7 @@ import ProjectContainer from '../components/ProjectContainer.astro';
 	<ProjectContainer link="https://quepasapapi.netlify.app/" img="/pics/que-pasa-papi.webp" alt=`Image of Que Pasa Papi project`>
 	  <div class="project-wrapper">
 		<a href="https://quepasapapi.com/da" target="_blank"> <h2>Que Pasa Papi</h2></a>
-        <p>Redesign af kampagnesite og videoproduktion for Que Pasa Papi.</p>
+        <p>Redesign af kampagnesite og videoproduktion for sommerens tapasoplevelse hos Que Pasa Papi.</p>
 		<div class="project-tags">
 				<a class="project-tag" href="https://github.com/chri44nj/quepasapapi" target="_blank">Kodning</a>
 			<a class="project-tag" href="https://www.youtube.com/shorts/YwmpP3GjmNA" target="_blank">Videoproduktion</a>
@@ -101,7 +101,7 @@ import ProjectContainer from '../components/ProjectContainer.astro';
 	<ProjectContainer link="https://royalescapes-kampagne.netlify.app/" img="/pics/royale-escapes.webp" alt=`Image of Royale Escapes project`>
 	  <div class="project-wrapper order">
 		<a href="https://www.royalescapes.dk/" target="_blank"> <h2>Royale Escapes</h2></a>
-        <p>Redesign af kampagnesite og videoproduktion for Royale Escapes.</p>
+        <p>Redesign af kampagnesite og videoproduktion for det nyeste escape room hos Royale Escapes.</p>
 		<div class="project-tags">
 			<a class="project-tag" href="https://github.com/chri44nj/royalEscapesSite" target="_blank">Kodning</a>
 				<a class="project-tag" href="https://www.youtube.com/watch?v=oCbtPdzOLko&ab_channel=ChristianValentin" target="_blank">Videoproduktion</a>
@@ -231,6 +231,10 @@ gap: 2rem;
 	gap: 0.5rem;
 }
 
+.project-wrapper p:first-of-type {
+	margin-block: 0.5rem;
+}
+
 .project-tags, .extra-projects {
 display: flex;
 justify-content: center;
@@ -313,6 +317,10 @@ font-size: clamp(1.5rem, 4dvw, 2rem);
 .project-wrapper {
 
 	gap: 1rem;
+}
+
+.project-wrapper p:first-of-type {
+	margin-block: 0;
 }
 
 .project-tags {
