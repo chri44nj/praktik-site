@@ -1,44 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BurgerMenu from "../components/BurgerMenu.astro";
 import Attribute from "../components/Attribute.astro"
 import SkillContainer from "../components/SkillContainer.astro"
 import ProjectContainer from '../components/ProjectContainer.astro';
 ---
 
 <Layout title="Hello there!">
-	
-	<article class="hero">
+	<article id="hero" class="hero">
 		<section class="top attributes">
-	<Attribute adjective="Lærenem" placement="top" description="Jeg er fandeme lærenem! Det er en af mine allerfedeste egenskaber. Fuck Janteloven!">
+	<Attribute adjective="Lærenem" placement="top" description="Det har jeg altid været og det vil jeg altid være. Screw you, Jantelov!">
 	</Attribute>
-	<Attribute adjective="Positiv" placement="top" description="Og det er ikke Covid. Jeg stræber altid efter at fokusere på det positive i en given situation, fremfor hvad jeg ikke har indflydelse på.">
+	<Attribute adjective="Positiv" placement="top" description="Og det er ikke Covid! Jeg er god til at finde det positive i en hvilken som helst situation.">
 	</Attribute>
-	<Attribute adjective="Stædig" placement="top" description="Hvis jeg virkelig sætter mig noget for, så gennemfører jeg det. Jeg øver mig samtidig i at være mindre stædig, når mit verdenssyn bliver udfordret.">
+	<Attribute adjective="Stædig" placement="top" description="Hvis jeg sætter mig noget for, så gennemfører jeg det, og hvis jeg virkelig tror jeg har ret, så kan jeg godt være lidt af en pain in the ass. Det øver jeg mig på!">
 	</Attribute>
-	<Attribute adjective="Kreativ" placement="top" description="En ven sagde engang, at jeg får de bedste idéer efter to øl. Idéer kommer jeg altså ikke til at løbe tør for, any time soon. Jeg kan dog have svært ved at raffinere disse idéer, så de ikke ender i et rod.">
+	<Attribute adjective="Kreativ" placement="top" description="En ven sagde engang, at jeg får de bedste idéer efter to øl. Jeg tror han var sarkastisk. Men idéer kommer jeg aldrig til at løbe tør for!">
 	</Attribute>
-	<Attribute adjective="Passioneret" placement="top" description="For kærlighed og venskab. For det nørdede; film, musik, bøger, brætspil. Og for den geniale linje kode og det unikke kameraskud.">
+	<Attribute adjective="Passioneret" placement="top" description="For kærlighed og venskab! For film, musik, bøger, brætspil og hvad end der har min interesse.">
 	</Attribute>
 	</section>
 	<section class="bottom attributes">
-		<Attribute adjective="Teamplayer" placement="bottom" description="Jeg har altid dyrket holdsport og jeg sætter en ære i at være en god kammerat. Jeg tror 100% på, at vi lever bedst når vi behandler hinanden godt.">
+		<Attribute adjective="Teamplayer" placement="bottom" description="Jeg har altid dyrket holdsport og jeg sætter en ære i at være en god kammerat.">
 		</Attribute>
-		<Attribute adjective="Doven" placement="bottom" description="Du ved, den gode slags. Work smarter, not harder. Jeg er sådan en 4-dages-arbejdsuge kind of guy. Og måske pjækker jeg lidt for ofte... Men til gengæld er jeg ærlig!">
+		<Attribute adjective="Doven" placement="bottom" description="Du ved, den gode slags; work smarter, not harder.">
 		</Attribute>
 		<Attribute adjective="Ærlig" placement="bottom" description="Jeg sværger!">
 		</Attribute>
-		<Attribute adjective="Nysgerrig" placement="bottom" description="På livet, mennesker og alle de ting, jeg ikke forstår... Så, virkelig mange ting.">
+		<Attribute adjective="Nysgerrig" placement="bottom" description="På livet, teknologi og alle de ting, jeg ikke forstår... Så, virkelig mange ting.">
 		</Attribute>
-		<Attribute adjective="Hårdtarbejdende" placement="bottom" description="Når jeg arbejder, gør jeg det så godt jeg overhovedet er i stand til. Jeg er hverken interesseret i at spilde din eller min tid, så jeg vægter effektivitet og gode resultater ekstremt højt.">
+		<Attribute adjective="Hårdtarbejdende" placement="bottom" description='Jeg er ikke fan af hele "arbejd-dig-selv-ihjel" konceptet. Faktisk bruger jeg helst så kort tid som muligt, på obligatoriske ting jeg ikke brænder for. Til gengæld er jeg yderst effektiv - og ærlig.'>
 		</Attribute> 
 	</section>
 	</article>
 
-	 <article class="welcome">
+	 <article id="welcome" class="welcome">
             <h1>Hej, mit navn er <br> <span class="name">Christian Valentin.</span></h1>
-            <p>Jeg studerer <span class="bold">Multimediedesign</span> på KEA og har særligt fokus på at lave <span class="bold">brugervenlige websites</span> og <span class="bold">awesome video
+            <p>Jeg studerer <span class="bold">Multimediedesign</span> på KEA og har særligt fokus på at lave <span class="bold">brugervenlige websites</span> og <span class="bold">underholdende video
                     content</span>. </p> 
-					<p>En af mine bedste egenskaber er, at jeg <span class="bold">elsker</span> at lære og er ekstremt <span class="bold">lærenem</span>. Scroll ned for et hurtigt overblik over en række af de <span class="bold">kompetencer</span>, jeg har erhvervet mig på studiet so far.  </p>
+					<p>En af mine bedste egenskaber er, at jeg er ekstremt <span class="bold">lærenem</span>. Så hvad end jobbet går ud på, så skal jeg nok få det klaret. Scroll ned for et hurtigt overblik over en række af de <span class="bold">kompetencer</span>, jeg har erhvervet mig på studiet so far.  </p>
             <a href="#skills"><i class="fa-sharp fa-solid fa-arrow-down arrow-down"></i></a>
         </article>
 
@@ -59,6 +59,7 @@ import ProjectContainer from '../components/ProjectContainer.astro';
 </SkillContainer>
 <SkillContainer jeg="Jeg er" heading="Ved at lære">
 <p class="skill">Tailwind</p>
+<p class="skill">Next.js</p>
 <p class="skill">Vite</p>
 <p class="skill">Lottie</p>
 <p class="skill">XD</p>
@@ -79,16 +80,16 @@ import ProjectContainer from '../components/ProjectContainer.astro';
 	</article>
 
 
-	<article class="projects">
+	<article id="projects" class="projects">
 <div class="projects-heading">
 			<p class="pm">Udvalgte</p>
 		<h2>Projekter</h2>
 		</div>
 			
-	<ProjectContainer link="https://quepasapapi.netlify.app/" img="../../public/pics/que-pasa-papi.png" alt=`Image of Que Pasa Papi project`>
-	  <div>
+	<ProjectContainer link="https://quepasapapi.netlify.app/" img="../../public/pics/que-pasa-papi.webp" alt=`Image of Que Pasa Papi project`>
+	  <div class="project-wrapper">
 		<a href="https://quepasapapi.com/da" target="_blank"> <h2>Que Pasa Papi</h2></a>
-        <p>Redesign af kampagnesite og videoproduktion for tapasvirksomheden Que Pasa Papi.</p>
+        <p>Redesign af kampagnesite og videoproduktion for Que Pasa Papi.</p>
 		<div class="project-tags">
 				<a class="project-tag" href="https://github.com/chri44nj/quepasapapi" target="_blank">Kodning</a>
 			<a class="project-tag" href="https://www.youtube.com/shorts/YwmpP3GjmNA" target="_blank">Videoproduktion</a>
@@ -97,10 +98,10 @@ import ProjectContainer from '../components/ProjectContainer.astro';
     </div>
 	</ProjectContainer>
 	  <div class="breakline2"></div>
-	<ProjectContainer link="https://royalescapes-kampagne.netlify.app/" img="../../public/pics/royale-escapes.png" alt=`Image of Royale Escapes project`>
-	  <div class="order">
+	<ProjectContainer link="https://royalescapes-kampagne.netlify.app/" img="../../public/pics/royale-escapes.webp" alt=`Image of Royale Escapes project`>
+	  <div class="project-wrapper order">
 		<a href="https://www.royalescapes.dk/" target="_blank"> <h2>Royale Escapes</h2></a>
-        <p>Redesign af kampagnesite og videoproduktion for escape-room kreatøren Royale Escapes.</p>
+        <p>Redesign af kampagnesite og videoproduktion for Royale Escapes.</p>
 		<div class="project-tags">
 			<a class="project-tag" href="https://github.com/chri44nj/royalEscapesSite" target="_blank">Kodning</a>
 				<a class="project-tag" href="https://www.youtube.com/watch?v=oCbtPdzOLko&ab_channel=ChristianValentin" target="_blank">Videoproduktion</a>
@@ -109,8 +110,8 @@ import ProjectContainer from '../components/ProjectContainer.astro';
     </div>
 	</ProjectContainer>
 	  <div class="breakline2"></div>
-	<ProjectContainer link="https://kuneredesignproject.netlify.app/" img="../../public/pics/kune-festival.png" alt=`Image of Kune Festival project`>
-	  <div>
+	<ProjectContainer link="https://kuneredesignproject.netlify.app/" img="../../public/pics/kune-festival.webp" alt=`Image of Kune Festival project`>
+	  <div class="project-wrapper">
 		<a href="https://www.kunekbh.com/" target="_blank"> <h2>Kune Festival</h2></a>
         <p>Redesign af website for Kune Festival og arbejde med dynamisk fetching af data fra Supabase.</p>
 		<div class="project-tags">
@@ -223,6 +224,12 @@ gap: 2rem;
 	text-align: center;
 }
 
+.project-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
 .project-tags, .extra-projects {
 display: flex;
 justify-content: center;
@@ -234,9 +241,8 @@ gap: 0.5rem;
 .project-tag, .extra-project {
 background-color: var(--primary);
 color: var(--secondary);
- padding: 0.25rem 0.75rem;
+ padding: 0.2rem 0.6rem;
 border-radius: 10px;
-
 }
 
 a.project-tag, .extra-project {
@@ -301,8 +307,17 @@ font-size: clamp(1.5rem, 4dvw, 2rem);
 	 text-align: start;
 }
 
+.project-wrapper {
+
+	gap: 1rem;
+}
+
 .project-tags {
 justify-content: start;
+}
+
+.project-tag, .extra-project {
+ padding: 0.25rem 0.75rem;
 }
 
 h2 {

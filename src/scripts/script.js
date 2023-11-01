@@ -1,3 +1,5 @@
+/* WEB ATTRIBUTES */
+
 const hero = document.querySelector(".hero");
 const attribute = document.querySelectorAll(".attribute");
 let hoveredCount = 0;
@@ -8,12 +10,12 @@ attribute.forEach((attribute) => {
 });
 
 function attributeHovered(event) {
-  if (!event.target.classList.contains("hovered")) {
+  if (!clickedAttribute.classList.contains("hovered")) {
     hoveredCount++;
     console.log(hoveredCount);
-    event.target.style.color = "var(--accent2)";
+    clickedAttribute.style.color = "var(--accent2)";
     console.log("color changed!");
-    event.target.classList.add("hovered");
+    clickedAttribute.classList.add("hovered");
   }
 
   if (hoveredCount == 10) {
@@ -24,35 +26,83 @@ function attributeHovered(event) {
   }
 }
 
+/* MOBILE ATTRIBUTES */
+
 let clickedCount = 0;
 
 const isMobile = "ontouchstart" in document.documentElement;
 
-attribute.forEach((attr) => {
+attribute.forEach((attribute) => {
   if (isMobile) {
-    attr.addEventListener("click", attributeClicked);
+    attribute.addEventListener("click", attributeClicked);
   }
 });
 
 function attributeClicked(event) {
-  if (!event.target.classList.contains("clicked")) {
+  const clickedAttribute = event.target;
+  if (!clickedAttribute.classList.contains("clicked")) {
     clickedCount++;
-    event.target.style.color = "var(--accent2)";
-    event.target.classList.add("clicked");
+    clickedAttribute.style.color = "var(--accent2)";
+    clickedAttribute.classList.add("clicked");
   }
 
-  const textbox = event.target.nextElementSibling;
-  textbox.classList.toggle("textbox-clicked");
-  if (event.target.style.textDecoration === "underline") {
-    event.target.style.textDecoration = "none";
+  const textbox = clickedAttribute.nextElementSibling;
+  const allTextBoxes = document.querySelectorAll(".textbox");
+
+  allTextBoxes.forEach((textbox) => {
+    if (textbox.classList.contains("textbox-clicked")) {
+      textbox.classList.remove("textbox-clicked");
+    }
+  });
+
+  attribute.forEach((attr) => {
+    if (attr !== clickedAttribute) {
+      attr.style.textDecoration = "none";
+    }
+  });
+
+  if (clickedAttribute.style.textDecoration === "underline") {
+    clickedAttribute.style.textDecoration = "none";
+    textbox.classList.remove("textbox-clicked");
   } else {
-    event.target.style.textDecoration = "underline";
+    clickedAttribute.style.textDecoration = "underline";
+    textbox.classList.add("textbox-clicked");
   }
 
   if (clickedCount === 10) {
     hero.style.backgroundImage = "url(pics/PB_C1.webp)";
-    attribute.forEach((attr) => {
-      attr.style.color = "var(--secondary)";
+    attribute.forEach((attribute) => {
+      attribute.style.color = "var(--secondary)";
     });
   }
 }
+
+/* BURGIRR */
+const burgerIcon = document.querySelector(".burger-icon");
+const burgerBar = document.querySelectorAll(".bar");
+const menu = document.querySelector(".menu");
+
+burgerIcon.addEventListener("click", checkBurger);
+
+function checkBurger() {
+  const menuContainer = document.querySelector(".menu-container");
+
+  if (menuContainer.style.left === "0px") {
+    menuContainer.style.left = "-50%";
+    burgerIcon.classList.remove("extra-margin");
+    burgerBar.forEach((bar) => {
+      bar.classList.remove("open");
+    });
+  } else {
+    menuContainer.style.left = "0px";
+    burgerIcon.classList.add("extra-margin");
+    burgerBar.forEach((bar) => {
+      bar.classList.add("open");
+    });
+  }
+}
+
+const links = document.querySelectorAll(".menu-container ul li");
+links.forEach((link) => {
+  link.addEventListener("click", checkBurger);
+});
