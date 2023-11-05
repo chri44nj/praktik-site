@@ -30,10 +30,11 @@ const { placement, adjective, description } = Astro.props;
   transform: translateX(-50%);
   background-color: var(--secondary);
   padding: 1rem;
-  border: none;
+  border: solid 2px var(--accent2);
   width: 75dvw;
     display: none;
     border-radius: 10px;
+    z-index: 100;
 }
 
 .textbox-clicked {

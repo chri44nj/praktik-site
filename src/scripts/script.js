@@ -78,6 +78,21 @@ function attributeClicked(event) {
   }
 }
 
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("textbox") || event.target.classList.contains("attribute")) {
+    console.log("Hej!");
+  } else {
+    const allTextBoxes = document.querySelectorAll(".textbox");
+    allTextBoxes.forEach((textbox) => {
+      textbox.classList.remove("textbox-clicked");
+    });
+
+    attribute.forEach((attribute) => {
+      attribute.style.textDecoration = "none";
+    });
+  }
+});
+
 /* BURGIRR */
 const burgerIcon = document.querySelector(".burger-icon");
 const burgerBar = document.querySelectorAll(".bar");
