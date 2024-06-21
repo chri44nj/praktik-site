@@ -8,6 +8,7 @@ import ProjectContainer from '../components/ProjectContainer.astro';
 
 <Layout title="Christian">
 	<article id="hero" class="hero">
+		<div class="hero-background"></div>
 		<section class="top attributes">
 	<Attribute adjective="Lærenem" placement="top" description="En af mine bedste egenskaber er, at jeg kan blive god til hvad end jeg sætter mig for. Hurtigt.">
 	</Attribute>
@@ -211,10 +212,19 @@ import ProjectContainer from '../components/ProjectContainer.astro';
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-   background-image: url(/pics/PB_BW1.webp); 
+}
+
+.hero-background {
+	   background-image: url(/pics/PB_C1.webp); 
    background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+ background-position: center center;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ transition: 0.5s ease-in-out;
 }
 
 .attributes {
@@ -334,7 +344,9 @@ a h2 {
 }
 
 @media only screen and (min-width: 850px) {
-
+.hero-background {
+	  filter: grayscale(100%);
+}
 .attributes {
   display: flex;
   justify-content: space-between;

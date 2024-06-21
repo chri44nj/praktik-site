@@ -1,6 +1,6 @@
 /* WEB ATTRIBUTES */
 
-const hero = document.querySelector(".hero");
+const heroBackground = document.querySelector(".hero-background");
 const attribute = document.querySelectorAll(".attribute");
 let hoveredCount = 0;
 
@@ -20,7 +20,7 @@ function attributeHovered(event) {
   }
 
   if (hoveredCount == 10) {
-    hero.style.backgroundImage = "url(pics/PB_C1.webp)";
+    heroBackground.style.filter = "none";
     attribute.forEach((attribute) => {
       attribute.style.color = "var(--secondary)";
     });
