@@ -14,7 +14,7 @@ function attributeHovered(event) {
   if (!clickedAttribute.classList.contains("hovered")) {
     hoveredCount++;
     console.log(hoveredCount);
-    clickedAttribute.style.color = "var(--accent2)";
+    clickedAttribute.style.color = "var(--accent)";
     console.log("color changed!");
     clickedAttribute.classList.add("hovered");
   }

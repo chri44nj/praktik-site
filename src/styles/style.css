@@ -57,11 +57,12 @@ a h2 {
   font-size: clamp(3rem, 6dvw, 5rem);
   color: var(--primary);
   margin-top: 1rem;
-  opacity: 90%;
+  opacity: 100%;
+  transition: 0.2s;
 }
 
 .arrow-down:hover {
-  opacity: 100%;
+  color: var(--accent2);
 }
 
 .pm {
