@@ -1,6 +1,8 @@
 ---
 ---
+
 <div class="menu-container">
+   <h2>MENU</h2>
       <ul>
             <li><a href="#hero">Mit fjæs</a></li>
             <li><a href="#welcome">Hej!</a></li>
@@ -25,16 +27,17 @@
     .menu-container {
         display: flex;
         justify-content: center;
-        align-items: end;
+        align-items: start;
+        flex-direction: column;
     position: fixed;
     top: 0;
-    right: -50%;
+    right: -100%;
     background-color: var(--accent);
     height: 100vh; 
     padding-right: 1rem;
     transition: right 0.5s;
     z-index: 100;
-      width: 50dvw;
+      width: 100dvw;
 }
 
 
@@ -82,15 +85,20 @@
     }
 
 
+    h2 {
+             margin-left: 2rem;
+             font-size: 3rem;
+             font-weight: bold;
+             color: white;
+    }
 ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin-bottom: 12.5dvh;
-    margin-left: 1rem;
     gap: 0.5rem;
+    margin-left: 2rem;
 }
 
 
@@ -99,6 +107,7 @@ a {
      font-size: clamp(1.4rem, 3dvw, 2rem);
     text-decoration: none;
     color: var(--secondary);
+    transition: 0.2s;
     &:hover {
         color: var(--accent2);
     }
@@ -115,9 +124,7 @@ a {
           width: 33dvw;
 }
 
-ul {
-     margin-bottom: 10dvh;
-}
+
 
 .burger-icon {
     margin-right: 2rem;

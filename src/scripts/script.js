@@ -102,16 +102,16 @@ burgerIcon.addEventListener("click", checkBurger);
 
 function checkBurger() {
   const menuContainer = document.querySelector(".menu-container");
+  const screenWidth = window.innerWidth;
+  const newRightValue = screenWidth >= 850 ? "-33%" : "-100%";
 
   if (menuContainer.style.right === "0px") {
-    menuContainer.style.right = "-50%";
-    burgerIcon.classList.remove("extra-margin");
+    menuContainer.style.right = newRightValue;
     burgerBar.forEach((bar) => {
       bar.classList.remove("open");
     });
   } else {
     menuContainer.style.right = "0px";
-    burgerIcon.classList.add("extra-margin");
     burgerBar.forEach((bar) => {
       bar.classList.add("open");
     });
